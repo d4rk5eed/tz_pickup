@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = TzPickup::VERSION
   spec.authors       = ["Yaroslav Zemlyanukhin"]
   spec.email         = ["y.zemlyanukhin@mdterra.org"]
-  spec.description   = %q{tz_pickup is utility for determining timezone based on geographic coordinations}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{tz_pickup}
+  spec.summary       = %q{tz_pickup is utility for determining timezone based on geographic coordinations}
   spec.homepage      = ""
   spec.license       = "MIT"
 
