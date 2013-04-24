@@ -24,6 +24,8 @@ module TzPickup
     # Output: list of longitude, latitude 
     # and timezone name
     def self.parse_line(line)
+      return nil if line =~ /^\s*#/ #drop off comments
+
       rx = %r|[A-Z]{2}\s+(?<latitude>[+\-]\d{4}(?:\d{2})?)(?<longitude>[+\-]\d{5}(?:\d{2})?)\s+(?<timezone>[\w/]+)|
       matches = line.match(rx)
       
@@ -92,6 +94,9 @@ module TzPickup
 
       File.open(src, 'r').each do |line|
         timezone = TzPickup::TzTree.parse_line(line)
+        
+        next unless timezone
+
         cities << timezone[2]
         points << [timezone[0], timezone[1], (cities.size - 1)]
       end
