@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'tz_pickup'
+TzPickup::CLI.start
