@@ -1,0 +1,5 @@
+Now run:
+
+	$ bundle exec tz_pickup charge
+
+for charging with new zone.tab

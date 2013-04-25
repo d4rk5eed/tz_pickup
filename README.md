@@ -1,7 +1,5 @@
 # TzPickup
 
-TODO: Write a gem description
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -16,9 +14,25 @@ Or install it yourself as:
 
     $ gem install tz_pickup
 
+Run:
+
+	$ bundle exec tz_pickup charge
+
+for charging with new zone.tab
+
 ## Usage
 
-TODO: Write usage instructions here
+* **TzPickup.tz_pickup(latitude, longitude)** returns timezone identifier,
+
+`latitude`, `longitude` -  are coordinates of the zone's principal location
+in ISO 6709 sign-degrees-minutes-seconds format,
+either +-DDMM+-DDDMM or +-DDMMSS+-DDDMMSS
+
+For example:
+
+```ruby
+
+```
 
 ## Contributing
 
@@ -27,9 +41,9 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
 =======
 tz_pickup
 =========
 
 tz_pickup
-
