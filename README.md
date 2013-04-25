@@ -1,5 +1,10 @@
 # TzPickup
 
+## Description
+
+Simple tool for picking up timezone identifier 
+using geographic coordinates. 
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -23,7 +28,6 @@ for charging with new zone.tab
 ## Usage
 
 * **TzPickup.tz_pickup(latitude, longitude)** returns timezone identifier,
-
 `latitude`, `longitude` -  are coordinates of the zone's principal location
 in ISO 6709 sign-degrees-minutes-seconds format,
 either +-DDMMSS+-DDMMSS or +-DDMMSS+-DDDMMSS,

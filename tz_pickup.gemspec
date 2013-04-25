@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = TzPickup::VERSION
   spec.authors       = ["Yaroslav Zemlyanukhin"]
   spec.email         = ["y.zemlyanukhin@mdterra.org"]
-  spec.description   = %q{tz_pickup}
-  spec.summary       = %q{tz_pickup is utility for determining timezone based on geographic coordinations}
+  spec.description   = %q{Simple tool for picking up timezone identifier using geographic coordinates.}
+  spec.summary       = %q{Timezone pick up utility}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -22,6 +22,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "mocha"
+
+  spec.post_install_message = File.read('USAGE')
 
   spec.add_dependency "kdtree"
   spec.add_dependency "thor"
