@@ -26,12 +26,14 @@ for charging with new zone.tab
 
 `latitude`, `longitude` -  are coordinates of the zone's principal location
 in ISO 6709 sign-degrees-minutes-seconds format,
-either +-DDMM+-DDDMM or +-DDMMSS+-DDDMMSS
+either +-DDMMSS+-DDMMSS or +-DDMMSS+-DDDMMSS,
+first latitude (+ is north), then longitude (+ is east).
 
 For example:
 
 ```ruby
-
+TzPickup.tz_pickup(554500, 373600)
+ => "Europe/Moscow" 
 ```
 
 ## Contributing
