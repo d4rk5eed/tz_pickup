@@ -25,7 +25,7 @@ describe TzPickup do
   end
 
   it "should return root path for current env" do
-    TzPickup.root.should eql File.expand_path(File.dirname(__FILE__))
+    TzPickup.root.should eql File.expand_path('.')
 
     Rails = mock('Rails')
     Rails.expects(:root).returns('correct rails root path').at_least_once
@@ -36,10 +36,10 @@ end
 
 describe TzPickup::TzTree do
   before(:all) do
-    @src = File.join('spec', TzPickup::TzTree::DB_PATH, TzPickup::TzTree::ZONE_FILE)
-    @zones = File.join('spec', TzPickup::TzTree::DB_PATH, TzPickup::TzTree::TREE_FILE)
-    @cities = File.join('spec', TzPickup::TzTree::DB_PATH, TzPickup::TzTree::CITY_FILE)
-    @path = File.expand_path('spec')
+    @path = File.expand_path('.')
+    @src = File.join(@path, TzPickup::TzTree::DB_PATH, TzPickup::TzTree::ZONE_FILE)
+    @zones = File.join(@path, TzPickup::TzTree::DB_PATH, TzPickup::TzTree::TREE_FILE)
+    @cities = File.join(@path, TzPickup::TzTree::DB_PATH, TzPickup::TzTree::CITY_FILE)
   end
 
   describe "get_tree" do

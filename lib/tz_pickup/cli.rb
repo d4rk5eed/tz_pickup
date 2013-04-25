@@ -15,6 +15,16 @@ module TzPickup
     end
 
     no_commands do
+      def mkdir
+        cmd = "mkdir -p #{ @dst_dir }"
+
+        if system( cmd )
+          puts "Using #{ @dst_dir }".green
+        else
+          puts "Failed to use #{ @dst_dir }".red
+        end
+      end
+
       def download  
         cmd = "wget -q #{ DOWNLOAD_URL } -O #{ @dst_file }"
 
@@ -26,8 +36,6 @@ module TzPickup
       end 
 
       def unpack
-        #tar zxf spec/db/tzdata-latest.tar.gz -C spec/db/ zone.tab
-
         cmd = "tar zxf #{ @dst_file } -C #{ @dst_dir } #{ TzPickup::TzTree::ZONE_FILE }"
 
         if system( cmd )
@@ -50,6 +58,7 @@ module TzPickup
 
     desc "charge", "Charge the latest tzdata file from #{ DOWNLOAD_URL }"
     def charge
+      mkdir
       download
       unpack
       remove

@@ -12,7 +12,7 @@ module TzPickup
   # Input: none
   # Output: root path
   def self.root 
-    (defined?(Rails) && !Rails.root.nil?) ? Rails.root : File.expand_path('../spec', File.dirname(__FILE__))
+    (defined?(Rails) && !Rails.root.nil?) ? Rails.root : File.expand_path('.')
   end
 
   ##
