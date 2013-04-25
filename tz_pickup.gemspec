@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["y.zemlyanukhin@mdterra.org"]
   spec.description   = %q{Simple tool for picking up timezone identifier using geographic coordinates.}
   spec.summary       = %q{Timezone pick up utility}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/d4rk5eed/tz_pickup"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
